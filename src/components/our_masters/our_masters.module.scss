@@ -1,0 +1,120 @@
+@import "../../app/[locale]/styles/variables.module.scss";
+@import "../../app/[locale]/styles/mixin.scss";
+
+.ourMasters {
+  width: 100%;
+  height: 670px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+
+  .swiper {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+
+    .swiper-pagination {
+      margin-top: 30px;
+
+      .swiper-pagination-bullet {
+        background: $color-input-stroke;
+        opacity: 0.8;
+
+        &.swiper-pagination-bullet-active {
+          background: $color-black;
+        }
+      }
+    }
+  }
+  @include mq("tablet", max) {
+    .swiper {
+      width: 760px;
+      margin: 0 5px;
+    }
+  }
+
+  @include mq("phone", max) {
+    .swiper {
+      width: 360px;
+      margin: 0 auto;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    margin: 0 auto;
+    @include flexbox;
+    gap: 10px;
+    @include justify-content(center);
+
+    .ourCard {
+      width: 285px;
+      height: 615px;
+      margin: 10px 0;
+      border-radius: 12px;
+      border: 1px solid $color-skyblue;
+      @include flexbox;
+      @include flex-direction(column);
+      @include justify-content(space-between);
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      @include font-style-georgia(23px, 200);
+
+      &:hover {
+        width: 300px;
+        height: 635px;
+        border: 2px solid $color-skyblue2;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      .img {
+        position: relative;
+        width: 100%;
+        height: 362px;
+        transition: all 0.3s;
+      }
+
+      .content {
+        height: 252px;
+        @include flexbox;
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(space-around);
+        background-color: $color-white;
+
+        .text {
+          width: 245px;
+          margin: 0 auto;
+        }
+
+        .button {
+          width: 248px;
+          height: 50px;
+          border-radius: 13px;
+          border: 1px solid $color-skyblue;
+          background-color: $color-white;
+          color: $color-text;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $color-skyblue2;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  @include mq("phone", max) {
+    .cards {
+      width: auto;
+    }
+  }
+
+  @include mq("tablet", max) {
+    .cards {
+      width: auto;
+    }
+  }
+}

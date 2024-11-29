@@ -1,0 +1,77 @@
+@import '../../app/[locale]/styles/mixin.scss';
+@import '../../app/[locale]/styles/variables.module.scss';
+
+.subscription {
+  @include flex-box(center, center);
+  @include justify-content(center);
+  gap: 20px;
+
+  .inputSubscription {
+    input {
+      width        : 450px;
+      height       : 60px;
+      padding      : 12px 50px;
+      border       : 1px solid #0275A6;
+      border-radius: 10px;
+    }
+  }
+
+  .buttonSubscription {
+    button {
+      @include font-style-georgia(22px, 700);
+    background-color: $color-light-blue;
+    height: 55px;
+    border-radius: 13px;
+    text-align: center;
+
+      &:hover {
+        background-color: #025a82;
+      }
+    }
+  }
+
+
+
+}
+
+@include mq('tablet', max) {
+  .subscription {
+    @include flex-box(center, center);
+    @include flex-direction(column);
+
+    .inputSubscription {
+      width: 100%;
+      @include flex-box(center, center);
+    }
+
+    .buttonSubscription {
+      @include flex-box(center, center);
+      width     : 100%;
+      margin-top: 15px;
+    }
+  }
+
+
+}
+
+@include mq('phone', max) {
+  .subscription {
+    gap: 0;
+
+    .inputSubscription {
+      width: 100%;
+      padding: 10px;
+      
+     input{
+        width: 350px;
+      }
+    }
+
+    .buttonSubscription {
+      margin: 0;
+      button{
+        width: 350px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../app/[locale]/styles/mixin.scss';
+@import '../../app/[locale]/styles/variables.module.scss';
+
+
+.header {
+  .phone {
+    @include сentering-x;
+    text-decoration: underline;
+    color: $color-text;
+  }
+  .select {
+    width: 80px;
+  }
+}

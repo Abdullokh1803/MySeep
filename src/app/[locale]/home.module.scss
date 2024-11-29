@@ -1,0 +1,35 @@
+@import '../[locale]/styles/mixin.scss';
+@import '../[locale]/styles/variables.module.scss';
+
+
+.title{
+    margin-top: 8.5%;
+    margin-bottom: 4%;
+}
+
+.partners{
+    background-color: $color-light-blue2;
+    padding: 40px;
+    margin-top: 8.5%;
+    .content{
+        @include flexbox;
+        @include flex-direction(column);
+        gap: 40px
+    }
+}
+
+.btns{
+    @include font-style-georgia(22px, 700);
+    @include flex-box(center, center);
+    @include align-items(center);
+    background-color: $color-light-blue;
+    height: 55px;
+    border-radius: 13px;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+
+    @include mq('phone', max){
+        width: 100%;
+    }
+}

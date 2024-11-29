@@ -1,0 +1,25 @@
+@import '../../app/[locale]/styles/mixin.scss';
+@import '../../app/[locale]/styles/variables.module.scss';
+
+.title{
+    @include font-style-gilroy(44px, 500);
+    color: $color-primary;
+    text-align: center;
+
+    @include mq('phone', max){
+        @include font-style-gilroy(32px, 500);
+    }
+}
+
+.subtitlee{
+    width: 600px;
+    text-align: center;
+    @include font-style-georgia(22px, 400);
+    color: $color-primary;
+    margin: 0 auto;
+
+    @include mq('phone', max){
+        width: 300px;
+        @include font-style-georgia(18px, 400);
+    }
+}

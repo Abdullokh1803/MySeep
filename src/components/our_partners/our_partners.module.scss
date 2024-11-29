@@ -1,0 +1,56 @@
+@import "../../app/[locale]/styles/variables.module.scss";
+@import "../../app/[locale]/styles/mixin.scss";
+
+.ourPartners {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  & > :nth-child(5) {
+    grid-column: 2;
+  }
+
+  & > :nth-child(6) {
+    grid-column: 3;
+  }
+
+  .image {
+    width: 100%;
+    @include flexbox;
+    @include justify-content(center);
+    position: relative;
+  }
+
+  .image:hover + .hover,
+  .hover:hover {
+    display: block;
+  }
+
+  .hover {
+    position: absolute;
+    z-index: 2;
+    width: 25%;
+    background-color: $color-review;
+    padding: 20px;
+    border-radius: 16px;
+    display: none;
+  }
+
+  @include mq("tablet", max) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    .hover {
+      width: 50%;
+    }
+  }
+
+  @include mq("phone", max) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    .hover {
+      width: 100%;
+    }
+  }
+}

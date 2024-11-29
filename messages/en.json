@@ -1,0 +1,14 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "news": "News",
+    "masters": "Our masters",
+    "services": "Services",
+    "partners": "Partners",
+    "contacts": "Contacts"
+  }
+}

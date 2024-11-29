@@ -1,0 +1,20 @@
+@import './mixin.scss';
+@import './variables.module.scss';
+
+// заговолок
+@each $size in $gilroy-sizes {
+  @each $weight in $gilroy-weights {
+    .w#{$weight}f#{($size / 1px)} {
+      @include font-style-gilroy($size, $weight);
+    }
+  }
+}
+
+// основные текст
+@each $size in $georgia-sizes {
+  @each $weight in $georgia-weights {
+    .w#{$weight}f#{($size / 1px)} {
+      @include font-style-georgia($size, $weight);
+    } 
+  }
+}

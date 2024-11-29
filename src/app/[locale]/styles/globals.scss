@@ -1,0 +1,27 @@
+@import './variables.module.scss';
+@import './mixin.scss';
+@import './fonts.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-gilroy);
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.some-icon-class {
+  display: none !important;
+}
+

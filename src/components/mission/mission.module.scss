@@ -1,0 +1,62 @@
+@import "../../app/[locale]/styles/variables.module.scss";
+@import "../../app/[locale]/styles/mixin.scss";
+
+.mission {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 20px;
+
+  .card {
+    @include flexbox;
+    @include align-items(center);
+    gap: 25px;
+    .content {
+      width: 100%;
+
+      .title {
+        @include font-style-gilroy(24px, 500);
+        margin-bottom: 10px;
+        color: $color-primary;
+
+        @include mq("phone", max) {
+          @include font-style-gilroy(18px, 500);
+          margin-bottom: 8px;
+        }
+      }
+
+      .description {
+        @include font-style-georgia(18px, 400);
+        line-height: 22px;
+        width: 100%;
+
+        @include mq("phone", max) {
+          @include font-style-georgia(14px, 400);
+          line-height: 20px;
+        }
+      }
+
+      @include mq("phone", max) {
+        width: 100%;
+      }
+    }
+    @include mq("phone", max) {
+      @include flex-direction(column);
+      @include align-items(center);
+      text-align: center;
+    }
+    @include mq("tablet", max) {
+      gap: 40px;
+    }
+  }
+
+  @include mq("tablet", max) {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  @include mq("phone", max) {
+    gap: 20px;
+    padding: 10px;
+  }
+}

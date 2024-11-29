@@ -1,0 +1,38 @@
+$color-primary: #0A2249;
+$color-orange: #FC7A00;
+$color-skyblue2: #3B8395;
+$color-skyblue: #3B8395;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-light-blue: #0275A6;
+$color-light-blue2: #BEECFF;
+$color-text: #21272A;
+$color-review: #FCF3EB;
+$color-error: #930303;
+$color-heart: #F20909;
+$color-input-stroke: #676666;
+
+
+
+// шрифты размеры
+$gilroy-sizes: 14px, 56px, 44px, 32px, 28px ;
+$gilroy-weights: 300, 400, 500, 600;
+$georgia-sizes: 24px, 22px, 20px, 18px, 16px, 14px;
+$georgia-weights: 400, 700;
+
+
+:export {
+  primaryColor: $color-primary;
+  orangeColor: $color-orange;
+  skyBlueColor: $color-skyblue;
+  skyBlue2Color: $color-skyblue2;
+  whiteColor: $color-white;
+  blackColor: $color-black;
+  textColor: $color-text;
+  skyLightColor: $color-light-blue;
+  skyLight2Color: $color-light-blue2;
+  reviewColor: $color-review;
+  errorColor: $color-error;
+  heartColor: $color-heart;
+  errorInputStroke: $color-input-stroke
+}

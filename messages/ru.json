@@ -1,0 +1,14 @@
+{
+  "HomePage": {
+    "title": "Привет мир!"
+  },
+  "Navigation": {
+    "home": "Главная",
+    "about": "О нас",
+    "news": "Новости",
+    "masters": "Наши мастера",
+    "services": "Услуги",
+    "partners": "Партнёры",
+    "contacts": "Контакты"
+  }
+}

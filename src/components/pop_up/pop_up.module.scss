@@ -1,0 +1,39 @@
+@import '../../app/[locale]/styles/mixin.scss';
+@import '../../app/[locale]/styles/variables.module.scss';
+
+.popUp {
+  @include flex-box(center, center);
+  @include flex-direction(column);
+  padding      : 20px 50px;
+  background   : $color-white;
+  border-radius: 15px;
+  width        : 100%;
+  max-width    : 100%;
+
+  .text {
+    @include font-style-gilroy(24px, 700);
+    color        : color-black;
+    text-align   : center;
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+  }
+
+  .button {
+    width        : 100%;
+    max-width    : 200px;
+    height       : 50px;
+    margin-top   : 15px;
+    background   : $color-light-blue;
+    color        : $color-white;
+    border       : none;
+    border-radius: 10px;
+    text-align   : center;
+    cursor       : pointer;
+
+    &:hover {
+      background: color-light-blue;
+    }
+  }
+}
+
