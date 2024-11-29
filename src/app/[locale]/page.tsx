@@ -11,12 +11,12 @@ import MembersAssociation from "./../../components/members_association/members_a
 import OurPartners from "./../../components/our_partners/our_partners";
 import Contacts from "./../../components/contacts/contact";
 import Button from "~/src/components/ui/button";
-import Header from '~/src/components/header/header';
-import dynamic from "next/dynamic";
+// import Header from '~/src/components/header/header';
+// import dynamic from "next/dynamic";
 
 export default function Home() {
 
-  const Mapbox = dynamic(() => import("./../../components/map/map"), { ssr: false });
+  // const Mapbox = dynamic(() => import("./../../components/map/map"), { ssr: false });
 
   return (
     <div className={classes.home}>
@@ -99,7 +99,7 @@ export default function Home() {
           </div>
           <Contacts />
         </section>
-        <Mapbox />
+        {/* <Mapbox /> */}
       </div>
     </div>
   );
