@@ -1,12 +1,14 @@
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
+// import { useTranslations, useLocale } from 'next-intl';
+import { useLocale } from 'next-intl';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { pageConfig } from '~/src/core/config/pages-config';
 import classes from './navbar.module.scss';
 export default function NavBar() {
-  const t = useTranslations('Navigation');
+  // const t = useTranslations('Navigation');
   const currentPath = usePathname();
   const locale = useLocale();
   const getLinkClass = (href: string) => {
@@ -18,7 +20,7 @@ export default function NavBar() {
   const links = (Object.keys(pageConfig) as Array<keyof typeof pageConfig>).map(
     (key) => ({
       key,
-      label: t(key),
+      label: key,
       href: pageConfig.getPath(key, locale),
     })
   );
