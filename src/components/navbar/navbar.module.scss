@@ -4,12 +4,13 @@
 .navbar {
   background-color: $color-primary;
   border-radius: 16px;
-  padding: 15px 20px;
-  max-width: 959px;
+  padding: 12px 20px;
+  max-width: 1000px;
   height: 63px;
   width: 100%;
   .link {
     display: inline-block;
+    margin: 0 5px;
   }
   .active {
     color: $color-orange;
@@ -18,3 +19,4 @@
     color: $color-orange;
   }
 }
+
